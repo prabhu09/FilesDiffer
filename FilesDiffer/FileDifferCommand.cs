@@ -7,7 +7,8 @@ using System.Collections.Generic;
 using EnvDTE;
 using System.Linq;
 using EnvDTE80;
-
+using System.Windows.Forms;
+using System.IO;
 
 namespace FilesDiffer
 {
@@ -65,6 +66,8 @@ namespace FilesDiffer
                 dte.ExecuteCommand("Tools.DiffFiles", $"\"{file1}\" \"{file2}\"");
             }
 
+
+
         }
         
 
@@ -75,7 +78,15 @@ namespace FilesDiffer
             file1 = items.ElementAtOrDefault(0);
             file2 = items.ElementAtOrDefault(1);
 
-           
+            if (items.Count() == 1)
+            {
+                var dialog = new OpenFileDialog();
+                dialog.InitialDirectory = Path.GetDirectoryName(file1);
+                dialog.ShowDialog();
+
+                file2 = dialog.FileName;
+            }
+            
 
             return !string.IsNullOrEmpty(file1) && !string.IsNullOrEmpty(file2);
         }

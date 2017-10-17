@@ -1,6 +1,6 @@
 # Road map
 
-- [ ] Nothing yet... 
+- [ ] More coming soon... 
 
 Features that have a checkmark are complete and available for
 download in the
@@ -10,6 +10,11 @@ download in the
 
 These are the changes to each version that has been released
 on the official Visual Studio extension gallery.
+
+## 1.1
+**2017-07-27**
+
+- [x] Compare any file on disk. 
 
 
 ## 1.0
