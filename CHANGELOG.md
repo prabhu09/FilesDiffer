@@ -14,7 +14,7 @@ on the official Visual Studio extension gallery.
 ## 1.1
 **2017-07-27**
 
-- [x] Compare any file on disk. 
+- [x] Compare to any file on disk. 
 
 
 ## 1.0
