@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Commands package="guidFileDifferCommandPackage">
+    <Groups>
+      <Group guid="guidFileDifferCommandPackageCmdSet" id="MyMenuGroup" priority="0x0300">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidFileDifferCommandPackageCmdSet" id="FileDifferCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidFileDifferCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Compare Files..</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\FileDifferCommand.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidFileDifferCommandPackage" value="{af454020-a489-4ef9-a437-de2464cad231}" />
+
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidFileDifferCommandPackageCmdSet" value="{6ec3b22e-943a-41fe-84bb-d2e84ae06194}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="FileDifferCommandId" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{34cb4140-9e97-4ae4-801d-a8160b41ffdf}" >
+      <IDSymbol name="bmpPic1" value="1" />
+      
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
